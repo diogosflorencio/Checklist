@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklist</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <label for="input">Digite sua tarefa:</label>
-        <input type="text" id="inputDoUsario" name="input">
-        <button id="botaoAdicionar">ADICIONAR</button>
-
-        <ul>
-            <input id="item-1"></li>
-            <li id="item-2"></li>
-        </ul>
+        <fieldset >
+            <legend>Checklist</legend>
+            <label for="inputUsuario">Digite sua tarefa:</label>
+            <input type="text" id="inputUsuario" name="input">
+            <button id="botaoAdicionar">ADICIONAR</button>
+        </fieldset>
+        <fieldset id="campoLista"></fieldset>
     </main>
-    <script src="script.js"></script>    
+    <script>
+        const inputUsuario = document.getElementById("inputUsuario");
+        const botaoAdicionar = document.getElementById('botaoAdicionar');
+        const campoLista = document.getElementById("campoLista");
+
+        // localStorage.clear()
+        botaoAdicionar.addEventListener("click", () => {
+            if(inputUsuario.value){
+                key = localStorage.length + 1
+                localStorage.setItem(key, inputUsuario.value);
+                location.reload()
+            }
+        });
+
+        let lista = document.createElement("ul");
+        campoLista.appendChild(lista);
+
+        for(let i = 1; i <= localStorage.length; i++){
+            let item = document.createElement("li");
+            item.innerText = localStorage.getItem(i);
+            lista.appendChild(item)
+        }
+
+    </script>    
 </body>
 </html>
