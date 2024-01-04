@@ -1,0 +1,10 @@
+main{
+    position: relative;
+}
+fieldset{
+    margin: 0 auto;
+    width: 425px;
+}
+label, input, button {
+    padding: 5px;
+}
