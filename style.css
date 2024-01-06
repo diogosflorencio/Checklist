@@ -1,10 +1,16 @@
-main{
+* {
+    margin: 0;
+}
+main {
     position: relative;
 }
-fieldset{
+fieldset {
     margin: 0 auto;
-    width: 425px;
+    width: 300px;
 }
 label, input, button {
     padding: 5px;
+}
+.itemLista {
+   
 }
