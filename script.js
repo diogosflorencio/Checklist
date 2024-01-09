@@ -55,7 +55,6 @@ const salvarItensEditados = param => {
 const itemLista = () => {
   let item = document.createElement('li');
   item.classList = 'item-lista';
-  item.max
   return item;
 };
 
