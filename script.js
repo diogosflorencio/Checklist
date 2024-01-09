@@ -14,11 +14,12 @@ botaoAdicionar.addEventListener('click', () => {
 const criaBotaoEditar = param => {
   let botao = document.createElement('button');
   botao.innerText = '✎';
-  botao.classList = 'BotaoEditar';
+  botao.classList = 'botao-editar';
   botao.value = param;
   botao.addEventListener('click', () => {
-    editarItens(botao.value);
-    itens[param].append(criaBotaoSalvarEdicao(botao.value));
+    editarItens(param);
+    itens[param].append(criaBotaoSalvarEdicao(param));
+    botao.remove();
   });
   return botao;
 };
@@ -27,15 +28,6 @@ const editarItens = param => {
   const inputEditar = document.createElement('input');
   inputEditar.classList = 'inputEditar';
   inputEditar.id = param;
-  
-//   for (let i = 0; i < itens.length; i++) {
-//     if (itens[i].value == param) {
-//       inputEditar.value = itens[i].innerHTML;
-//       itens[i].classList = '';
-//       itens[i].innerHTML = '';
-//       itens[i].append(inputEditar);
-//     }
-//   }
   inputEditar.value = itens[param].innerHTML;
   itens[param].classList = '';
   itens[param].innerHTML = '';
@@ -45,7 +37,7 @@ const editarItens = param => {
 const criaBotaoSalvarEdicao = param => {
   let botao = document.createElement('button');
   botao.innerText = 'Salvar';
-  botao.classList = 'BotaoEditar';
+  botao.classList = 'BotaoSalvarEdicao';
   botao.addEventListener('click', () => {
     salvarItensEditados(param);
   });
@@ -53,21 +45,17 @@ const criaBotaoSalvarEdicao = param => {
 };
 
 const salvarItensEditados = param => {
-    console.log(document.getElementById(param).value)
-  
-//     itens[param].value = "dois"
-//   for (let i = 0; i < itens.length; i++) {
-//     if (itens[i].value == 'teste 1') {
-//       console.log(itens[i].value);
-//       itens[i].innerHTML = 'aa';
-//       itens[i].replaceWith(item);
-//     }
-//   }
+    let novoValorTexto = document.getElementById(param).value;
+    localStorage.setItem(param, novoValorTexto)
+    let input = document.getElementById(param);
+    input.remove();
+    location.reload();
 };
 
 const itemLista = () => {
   let item = document.createElement('li');
-  item.classList = 'itemLista';
+  item.classList = 'item-lista';
+  item.max
   return item;
 };
 
