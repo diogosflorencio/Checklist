@@ -18,8 +18,7 @@ const criaBotaoEditar = param => {
   botao.value = param;
   botao.addEventListener('click', () => {
     editarItens(botao.value);
-    // arrumar um jeito de limitar a criação de botões salvar
-    itens[param].append(criaBotaoSalvarEdicao());
+    itens[param].append(criaBotaoSalvarEdicao(botao.value));
   });
   return botao;
 };
@@ -27,14 +26,20 @@ const criaBotaoEditar = param => {
 const editarItens = param => {
   const inputEditar = document.createElement('input');
   inputEditar.classList = 'inputEditar';
-  for (let i = 0; i < itens.length; i++) {
-    if (itens[i].value == param) {
-      inputEditar.value = itens[i].innerHTML;
-      itens[i].classList = '';
-      itens[i].innerHTML = '';
-      itens[i].append(inputEditar);
-    }
-  }
+  inputEditar.id = param;
+  
+//   for (let i = 0; i < itens.length; i++) {
+//     if (itens[i].value == param) {
+//       inputEditar.value = itens[i].innerHTML;
+//       itens[i].classList = '';
+//       itens[i].innerHTML = '';
+//       itens[i].append(inputEditar);
+//     }
+//   }
+  inputEditar.value = itens[param].innerHTML;
+  itens[param].classList = '';
+  itens[param].innerHTML = '';
+  itens[param].append(inputEditar);
 };
 
 const criaBotaoSalvarEdicao = param => {
@@ -42,23 +47,22 @@ const criaBotaoSalvarEdicao = param => {
   botao.innerText = 'Salvar';
   botao.classList = 'BotaoEditar';
   botao.addEventListener('click', () => {
-    salvarItensEditados(editarItens());
+    salvarItensEditados(param);
   });
   return botao;
 };
 
 const salvarItensEditados = param => {
-  const item = document.createElement('li');
-  console.log(param);
-  // inputEditar.classList = "inputEditar";
-
-  for (let i = 0; i < itens.length; i++) {
-    if (itens[i].value == 'teste 1') {
-      console.log(itens[i].value);
-      itens[i].innerHTML = 'aa';
-      itens[i].replaceWith(item);
-    }
-  }
+    console.log(document.getElementById(param).value)
+  
+//     itens[param].value = "dois"
+//   for (let i = 0; i < itens.length; i++) {
+//     if (itens[i].value == 'teste 1') {
+//       console.log(itens[i].value);
+//       itens[i].innerHTML = 'aa';
+//       itens[i].replaceWith(item);
+//     }
+//   }
 };
 
 const itemLista = () => {
