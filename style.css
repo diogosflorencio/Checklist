@@ -1,16 +1,18 @@
 * {
     margin: 0;
-}
-main {
+  }
+  main {
     position: relative;
-}
-fieldset {
+  }
+  fieldset {
     margin: 0 auto;
     width: 300px;
-}
-label, input, button {
+  }
+  label,
+  input,
+  button {
     padding: 5px;
-}
-.itemLista {
-   
-}
+  }
+  .itemListaOculto {
+  }
+  
