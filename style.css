@@ -13,5 +13,14 @@ input,
 button {
   padding: 5px;
 }
-.itemListaOculto {
+.item-lista{
+  display: inline-block;
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+.botao-editar {
 }
