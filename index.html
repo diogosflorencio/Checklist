@@ -1,112 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checklist</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <fieldset >
-            <legend>Checklist</legend>
-            <label for="inputUsuario">Digite sua tarefa:</label>
-            <input type="text" id="inputUsuario" name="input">
-            <button id="botaoAdicionar">ADICIONAR</button>
-        </fieldset>
-        <fieldset id="campoLista">
-            <ul id="lista"></ul>
-        </fieldset>
+      <fieldset>
+        <legend>Checklist</legend>
+        <label for="inputUsuario">Digite sua tarefa:</label>
+        <input type="text" id="inputUsuario" name="input" />
+        <button id="botaoAdicionar">ADICIONAR</button>
+      </fieldset>
+      <fieldset id="campoLista">
+        <ul id="lista"></ul>
+      </fieldset>
     </main>
-
-    <script>
-        const inputUsuario = document.getElementById("inputUsuario");
-        const botaoAdicionar = document.getElementById('botaoAdicionar');
-        const campoLista = document.getElementById("campoLista");
-        const lista = document.getElementById("lista");
-        const itens = document.getElementsByTagName("li");
-
-        botaoAdicionar.addEventListener("click", () => {
-            if(inputUsuario.value){
-                localStorage.setItem(localStorage.length, inputUsuario.value);
-                location.reload();   
-            }
-        });        
-        const criaBotaoEditar = (param) => {
-            let botao = document.createElement("button");
-            botao.innerText = "✎"
-            botao.classList = "BotaoEditar";
-            botao.value = param;
-            botao.addEventListener("click",() => {
-                editarItens(botao.value);
-            })
-            return botao;
-        }
-        const criaBotaoSalvarEdicao = (param) => {
-            let botao = document.createElement("button");
-            botao.innerText = "Salvar"
-            botao.classList = "BotaoEditar";
-            console.log(editarItens())
-            botao.addEventListener("click",() => {
-                salvarItensEditados(editarItens());
-            })
-
-            return botao;
-        }
-
-        
-        
-        const itemLista = () => {
-            let item = document.createElement("li");
-            item.classList = "itemLista"
-            return item;
-        }
-        
-        const editarItens = (param) => {
-            const inputEditar = document.createElement("input");
-            inputEditar.classList = "inputEditar";
-            
-            for (let i = 0; i < itens.length; i++){
-                if (itens[i].value == param){
-                    inputEditar.value = itens[i].innerText;
-                    itens[i].replaceWith(inputEditar);
-                    return inputEditar.value;
-  
-                }
-            }
-            
-        }
-   
-        const salvarItensEditados = (param) => {
-            const item = document.createElement("li");
-            console.log(param)
-            // inputEditar.classList = "inputEditar";
-            
-            for (let i = 0; i < itens.length; i++){
-                if (itens[i].value == "teste 1"){
-                    console.log(itens[i].value)
-                    itens[i].innerHTML = "aa";
-                    itens[i].replaceWith(item)
-                }
-            }
-        }
- 
-        
-        // iteração sobre o locaStorage para adicionar valor ao item, 
-        // adiciona item à lista, adicionar botao à lista passando o index 
-        // como parametro
-
-        for(let i = 0; i < localStorage.length; i++){
-            let item = itemLista();
-            item.innerHTML = localStorage.getItem(i);
-            item.value = i;
-            lista.appendChild(item)
-            lista.appendChild(criaBotaoEditar(i));
-            lista.appendChild(criaBotaoSalvarEdicao())
-        }
-
-
-        // localStorage.clear()
-    </script>    
-</body>
+  </body>
 </html>
