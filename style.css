@@ -1,18 +1,17 @@
 * {
-    margin: 0;
-  }
-  main {
-    position: relative;
-  }
-  fieldset {
-    margin: 0 auto;
-    width: 300px;
-  }
-  label,
-  input,
-  button {
-    padding: 5px;
-  }
-  .itemListaOculto {
-  }
-  
+  margin: 0;
+}
+main {
+  position: relative;
+}
+fieldset {
+  margin: 0 auto;
+  width: 300px;
+}
+label,
+input,
+button {
+  padding: 5px;
+}
+.itemListaOculto {
+}
