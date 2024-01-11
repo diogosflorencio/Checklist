@@ -18,8 +18,8 @@ button {
 }
 .item-lista{
   display: inline-block;
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 220px;
+  max-width: 220px;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 5px;
@@ -28,6 +28,21 @@ button {
 }
 .botao-editar {
   margin: 2px;
-  font-size: 16px;
-  padding: 0.2;
+  padding: 15px 10px;
+  background-image: url("img/icone-editar.png") ;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer ;
+}
+.botao-excluir {
+  margin: 2px;
+  padding: 16px 10px;
+  background-image: url("img/excluir (1).png") ;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer ;
 }
