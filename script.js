@@ -13,7 +13,6 @@ botaoAdicionar.addEventListener('click', () => {
 
 const criaBotaoEditar = param => {
   let botao = document.createElement('button');
-  botao.innerText = '✎';
   botao.classList = 'botao-editar';
   botao.value = param;
   botao.addEventListener('click', () => {
@@ -52,6 +51,22 @@ const salvarItensEditados = param => {
     location.reload();
 };
 
+const criaBotaoExcluir = param => {
+  let botao = document.createElement('button');
+  botao.classList = 'botao-excluir';
+  botao.value = param;
+  botao.addEventListener('click', () => {
+    excluirItem(param);
+    botao.remove();
+  });
+  return botao;
+}
+
+const excluirItem = param => {
+  localStorage.removeItem(param);
+  location.reload();
+}
+
 const itemLista = () => {
   let item = document.createElement('li');
   item.classList = 'item-lista';
@@ -68,6 +83,8 @@ for (let i = 0; i < localStorage.length; i++) {
   item.value = i;
   lista.appendChild(item);
   lista.appendChild(criaBotaoEditar(i));
+  lista.appendChild(criaBotaoExcluir(i));
+  
 }
 
-// localStorage.clear()
+//localStorage.clear()
