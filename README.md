@@ -19,7 +19,7 @@
 
 O projeto ainda está em desenvolvimento, e as próximas atualizações serão focadas nas seguintes tarefas:
 - [x] Criação do README.md
-- [ ] Adição da funcionalidade de excluir itens
+- [x] Adição da funcionalidade de excluir itens
 - [ ] Possibilidade de marcar item como concluído
 - [ ] Estilizar toda a interface com CSS puro ou tailwind css
 - [ ] Fazer testes e correções
