@@ -22,6 +22,7 @@ O projeto ainda está em desenvolvimento, e as próximas atualizações serão f
 - [x] Adição da funcionalidade de excluir itens *
 - [x] Adicionar itens apertando na tecla enter
 - [x] Possibilidade de marcar item como concluído
+- [ ] Contador de tarefas marcadas como concluídas
 - [ ] Estilizar toda a interface com CSS puro ou tailwind css
 - [ ] Fazer testes e correções
 - [ ] Finalizado
