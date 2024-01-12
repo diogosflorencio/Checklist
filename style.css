@@ -46,3 +46,7 @@ button {
   border: none;
   cursor: pointer ;
 }
+.check {
+  text-decoration: line-through;
+  color: rgb(139, 138, 138);
+}
