@@ -5,11 +5,21 @@ const lista = document.getElementById('lista');
 const itens = document.getElementsByTagName('li');
 
 botaoAdicionar.addEventListener('click', () => {
+  adicionarItens();
+});
+
+inputUsuario.addEventListener("keydown", (event) => {
+  if(event.key == "Enter"){
+    adicionarItens();
+  }
+})
+
+const adicionarItens = () => {
   if (inputUsuario.value) {
     localStorage.setItem(localStorage.length, inputUsuario.value);
     location.reload();
   }
-});
+}
 
 const criaBotaoEditar = param => {
   let botao = document.createElement('button');
@@ -31,6 +41,11 @@ const editarItens = param => {
   itens[param].classList = '';
   itens[param].innerHTML = '';
   itens[param].append(inputEditar);
+  inputEditar.addEventListener("keydown", (event) => {
+    if(event.key == "Enter"){
+      salvarItensEditados(param);
+    }
+  })
 };
 
 const criaBotaoSalvarEdicao = param => {
@@ -73,6 +88,8 @@ const itemLista = () => {
   return item;
 };
 
+
+
 // iteração sobre o locaStorage para adicionar valor ao item,
 // adiciona item à lista, adicionar botao à lista passando o index
 // como parametro
@@ -85,6 +102,18 @@ for (let i = 0; i < localStorage.length; i++) {
   lista.appendChild(criaBotaoEditar(i));
   lista.appendChild(criaBotaoExcluir(i));
   
+}
+
+// marcar e desmarcar item
+
+for(let i = 0; i < itens.length; i++){
+  itens[i].addEventListener("click", (event) => {
+    if(itens[i].classList.contains("check")){
+      itens[i].classList.remove('check');
+    }else {
+      itens[i].classList.add('check');
+    }
+  })
 }
 
 //localStorage.clear()
