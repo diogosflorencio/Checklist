@@ -21,7 +21,7 @@ O projeto ainda está em desenvolvimento, e as próximas atualizações serão f
 - [x] Criação do README.md
 - [x] Adição da funcionalidade de excluir itens *
 - [x] Adicionar itens apertando na tecla enter
-- [ ] Possibilidade de marcar item como concluído
+- [x] Possibilidade de marcar item como concluído
 - [ ] Estilizar toda a interface com CSS puro ou tailwind css
 - [ ] Fazer testes e correções
 - [ ] Finalizado
