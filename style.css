@@ -4,15 +4,30 @@
 main {
   position: relative;
 }
-fieldset {
+.fieldset-1 {
   margin: 0 auto;
-  width: 300px;
+  width: 306px;
+  border-radius: 10px 10px 0px 0px;
+}
+.fieldset-2 {
+  margin: 0 auto;
+  width: 306px;
+  border-radius: 0px 0px 10px 10px;
+
 }
 label,
 input,
 button {
   padding: 5px;
 }
+#botaoAdicionar {
+
+}
+.contador {
+  display: inline-block;
+  font-size: 20px;
+}
+
 #lista {
   padding: 5px;
 }
