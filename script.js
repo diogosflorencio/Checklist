@@ -3,6 +3,7 @@ const botaoAdicionar = document.getElementById('botaoAdicionar');
 const campoLista = document.getElementById('campoLista');
 const lista = document.getElementById('lista');
 const itens = document.getElementsByTagName('li');
+const contador = document.getElementsByClassName('contador');
 
 botaoAdicionar.addEventListener('click', () => {
   adicionarItens();
