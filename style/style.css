@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+}
+main {
+  position: relative;
+}
+.fieldset-1 {
+  margin: 0 auto;
+  width: 306px;
+  border-radius: 10px 10px 0px 0px;
+}
+.fieldset-2 {
+  margin: 0 auto;
+  width: 306px;
+  border-radius: 0px 0px 10px 10px;
+
+}
+label,
+input,
+button {
+  padding: 5px;
+}
+#botaoAdicionar {
+
+}
+#contador {
+  display: inline-block;
+  font-size: 20px;
+}
+
+#lista {
+  padding: 5px;
+}
+.item-lista{
+  display: inline-block;
+  min-width: 220px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+  white-space: nowrap;
+  list-style-type: none;
+}
+.botao-editar {
+  margin: 2px;
+  padding: 15px 10px;
+  background-image: url("../img/icone-editar.png") ;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer ;
+}
+.botao-excluir {
+  margin: 2px;
+  padding: 16px 10px;
+  background-image: url("../img/icone-excluir.png") ;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer ;
+}
+.check {
+  text-decoration: line-through;
+  color: rgb(139, 138, 138);
+}
