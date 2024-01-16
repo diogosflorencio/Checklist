@@ -24,8 +24,8 @@ O projeto ainda está em desenvolvimento, e as próximas atualizações serão f
 - [x] Possibilidade de marcar item como concluído
 - [x] Contador de tarefas marcadas como concluídas
 - [x] Estilizar toda a interface com CSS puro ou tailwind css
-- [ ] Fazer testes e correções
-- [ ] Finalizado
+- [x] Fazer testes e correções
+- [x] Finalizado
 
 ## 💻 Pré-requisitos
 
