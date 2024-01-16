@@ -53,7 +53,7 @@ const editarItens = param => {
 
 const criaBotaoSalvarEdicao = param => {
   let botao = document.createElement('button');
-  botao.innerText = 'Salvar';
+  botao.innerText = 'SALVAR';
   botao.classList = 'BotaoSalvarEdicao';
   botao.addEventListener('click', () => {
     salvarItensEditados(param);
