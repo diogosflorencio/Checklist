@@ -1,45 +1,87 @@
 * {
   margin: 0;
 }
+body{
+  background-color: rgb(147, 192, 252);
+}
 main {
   position: relative;
 }
 .fieldset-1 {
   margin: 0 auto;
-  width: 306px;
+  min-width: 306px;
+  width: 322px;
   border-radius: 10px 10px 0px 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 4px;
+  border: 2px solid black;
+  box-shadow: 2px 0px rgb(0, 0, 0);
+  margin-bottom: 1px;
 }
 .fieldset-2 {
+  border: 2px solid black;
   margin: 0 auto;
-  width: 306px;
+  min-width: 306px;
+  width: 322px;
+  padding: 4px;
   border-radius: 0px 0px 10px 10px;
-
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px rgb(0, 0, 0);
 }
 label,
 input,
 button {
-  padding: 5px;
+  font-size: 15px;
+  padding: 5px 2px;
+  font-family: monospace;
+  margin: 0px 0px 10px 0px;
+  margin-left: 8px;
+}
+#inputUsuario {
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  border: solid black 2px;
+  height: 18px;
+  background-color: rgba(147, 192, 252, 0.342);
+}
+#inputUsuario:focus {
+  outline: none;
 }
 #botaoAdicionar {
-
+  background-color: rgb(147, 192, 252);
+  border: solid black 2px;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  padding: 5px;
+  margin-left: 4px;
+}
+#botaoAdicionar:hover {
+    background-color: rgb(128, 182, 253);
+    cursor: pointer;
 }
 #contador {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
 
 #lista {
   padding: 5px;
+  list-style-type: none;
 }
 .item-lista{
   display: inline-block;
-  min-width: 220px;
-  max-width: 220px;
+  min-width: 240px;
+  max-width: 240px;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 5px;
   white-space: nowrap;
   list-style-type: none;
+  margin-left: 10px;
 }
 .botao-editar {
   margin: 2px;
@@ -50,6 +92,31 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer ;
+}
+.inputEditar {
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  border: solid black 2px;
+  background-color: rgba(147, 192, 252, 0.342);
+  margin: 0 0 0 6px;
+  height: 18px;
+}
+.inputEditar:focus {
+  outline: none;
+} 
+.BotaoSalvarEdicao {
+  background-color: rgb(147, 192, 252);
+  border: solid black 2px;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  padding: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+li {
+  display: inline-block;
 }
 .botao-excluir {
   margin: 2px;
