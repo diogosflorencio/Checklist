@@ -23,7 +23,7 @@ O projeto ainda está em desenvolvimento, e as próximas atualizações serão f
 - [x] Adicionar itens apertando na tecla enter
 - [x] Possibilidade de marcar item como concluído
 - [x] Contador de tarefas marcadas como concluídas
-- [ ] Estilizar toda a interface com CSS puro ou tailwind css
+- [x] Estilizar toda a interface com CSS puro ou tailwind css
 - [ ] Fazer testes e correções
 - [ ] Finalizado
 
